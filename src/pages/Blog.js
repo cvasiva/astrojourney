@@ -174,7 +174,6 @@ function Sidebar({ activeCategory, setActiveCategory, search, setSearch, setPage
           {d.categories.map((cat) => (
             <button
               key={cat.name}
-              role="listitem"
               onClick={() => { setActiveCategory(cat.name); setPage(1); }}
               aria-pressed={activeCategory === cat.name}
               className={`w-full flex justify-between items-center px-4 py-2.5 rounded-xl text-sm transition-colors

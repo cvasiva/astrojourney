@@ -37,9 +37,9 @@ export default function Footer() {
           <h4 className="font-semibold text-white mb-4 text-sm sm:text-base">Resources</h4>
           <div className="space-y-2 sm:space-y-3">
             {["Google Scholar", "ORCID", "Arxiv", "GitHub"].map((item) => (
-              <a key={item} href="#" className="block text-gray-400 hover:text-purple-300 transition-colors text-sm">
+              <button key={item} type="button" className="block text-gray-400 hover:text-purple-300 transition-colors text-sm text-left">
                 {item}
-              </a>
+              </button>
             ))}
           </div>
         </div>
