@@ -10,7 +10,7 @@ const iconMap = { FiBook, FiAward, FiGithub, FiLinkedin, FiClock, FiMail };
 /* ================= HERO ================= */
 function Hero() {
   return (
-    <section className="bg-gradient-to-br from-[#26143a] via-[#1f1030] to-[#180c26] py-16 sm:py-20 md:py-24">
+    <section className="bg-gradient-to-br from-[#26143a] via-[#1f1030] to-[#180c26] py-14 sm:py-20 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* left-aligned */}
         <span className="inline-block px-4 py-1.5 rounded-full bg-purple-500/15 border border-purple-500/25 text-xs sm:text-sm text-purple-300 mb-5">
@@ -241,7 +241,7 @@ function ContactSidebar() {
 /* ================= COMMUNITY BANNER ================= */
 function Banner() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 sm:pb-18 lg:pb-24">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14 md:pb-16 lg:pb-20">
       <div className="relative rounded-2xl lg:rounded-[32px] overflow-hidden h-[200px] sm:h-[260px] md:h-[320px]">
         <img src={d.banner.image} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent" />
@@ -260,7 +260,7 @@ export default function Contact() {
     <div className="bg-[#0f0c16] text-white min-h-screen">
       <Hero />
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-16 lg:py-20">
         {/* section intro — left aligned */}
         <div className="mb-10">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold">{d.form.title}</h2>

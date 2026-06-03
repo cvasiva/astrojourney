@@ -8,7 +8,7 @@ import d from "../data/aboutData.json";
 function Hero() {
   const navigate = useNavigate();
   return (
-    <section className="bg-gradient-to-br from-[#2a163d] via-[#221236] to-[#1a0d2a] py-16 sm:py-20 md:py-28">
+    <section className="bg-gradient-to-br from-[#2a163d] via-[#221236] to-[#1a0d2a] py-14 sm:py-20 md:py-24 lg:py-28">
       <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
         <img
           src={d.hero.img}
@@ -50,7 +50,7 @@ function Hero() {
 function MainContent() {
   const navigate = useNavigate();
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18 lg:py-24">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 items-start">
 
         {/* LEFT — 2 cols wide: journey + timeline + goals */}
@@ -162,7 +162,7 @@ function MainContent() {
 function BottomCTA() {
   const navigate = useNavigate();
   return (
-    <section className="border-t border-white/5 py-12 sm:py-14">
+    <section className="border-t border-white/5 py-10 sm:py-12 md:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>

@@ -9,11 +9,11 @@ const iconMap = { FiCpu, FiGlobe };
 function Hero() {
   const navigate = useNavigate();
   return (
-    <section className="relative min-h-screen flex items-center justify-center text-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center text-center px-4 sm:px-6 lg:px-8 overflow-hidden pt-8 sm:pt-0">
       {/* background glow */}
       <div className="absolute w-[300px] sm:w-[480px] h-[300px] sm:h-[480px] rounded-full bg-purple-500/20 blur-[120px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-3xl w-full mx-auto py-24 sm:py-32">
+      <div className="relative z-10 max-w-3xl w-full mx-auto py-20 sm:py-28 lg:py-32">
         <span className="px-4 py-1.5 border border-white/10 rounded-full text-xs sm:text-sm">
           {d.hero.badge}
         </span>
@@ -52,7 +52,7 @@ function Hero() {
 /* ================= ABOUT SNIPPET ================= */
 function AboutSnippet() {
   return (
-    <section className="bg-[#0f0c16] py-16 sm:py-20 lg:py-28">
+    <section className="bg-[#0f0c16] py-14 sm:py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
@@ -114,7 +114,7 @@ function AboutSnippet() {
 function BlogPreview() {
   const navigate = useNavigate();
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-18 lg:py-20">
       {/* section header — left label, right link */}
       <div className="flex items-end justify-between mb-10 sm:mb-12">
         <div>
@@ -150,7 +150,7 @@ function BlogPreview() {
 function PromoCards() {
   const navigate = useNavigate();
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 lg:pb-24">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 md:pb-18 lg:pb-20">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
         {d.cards.map((card, i) => (
           <div key={i} className={`rounded-2xl lg:rounded-3xl ${card.bg} p-7 sm:p-8 lg:p-10 flex flex-col`}>
@@ -175,7 +175,7 @@ function PromoCards() {
 function CollabCTA() {
   const navigate = useNavigate();
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 lg:pb-28">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
       <div className="relative rounded-2xl lg:rounded-[40px] bg-gradient-to-br from-[#2b1343] via-[#261040] to-[#1a0d2e] overflow-hidden">
         {/* decorative blobs */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-purple-600/20 rounded-full blur-[80px] pointer-events-none" />

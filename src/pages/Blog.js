@@ -15,7 +15,7 @@ function isValidEmail(v) {
 /* ================= HERO ================= */
 function Hero() {
   return (
-    <section className="bg-gradient-to-br from-[#2b173e] via-[#221232] to-[#1a0d28] py-16 sm:py-20 md:py-24">
+    <section className="bg-gradient-to-br from-[#2b173e] via-[#221232] to-[#1a0d28] py-14 sm:py-20 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <span className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs sm:text-sm text-purple-200 mb-5">
           {d.hero.badge}
@@ -401,7 +401,7 @@ export default function Blog() {
     <div className="bg-[#0f0c16] text-white min-h-screen">
       <Hero />
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-16 lg:py-20">
 
         {/* Mobile filter toggle */}
         <button

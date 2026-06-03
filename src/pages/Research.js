@@ -8,7 +8,7 @@ import d from "../data/researchData.json";
 /* ================= HERO ================= */
 function Hero({ pubRef }) {
   return (
-    <section className="bg-gradient-to-br from-[#1e0d30] via-[#180b28] to-[#130920] py-16 sm:py-20 md:py-28">
+    <section className="bg-gradient-to-br from-[#1e0d30] via-[#180b28] to-[#130920] py-14 sm:py-20 md:py-24 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <span className="bg-purple-500/20 border border-purple-500/30 px-4 py-1.5 rounded-full text-xs text-purple-300 inline-block">
           {d.hero.badge}
@@ -47,7 +47,7 @@ function Hero({ pubRef }) {
 function Featured() {
   const f = d.featured;
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18 lg:py-20">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
       {/* section label */}
       <div className="mb-8">
         <h2 className="text-2xl sm:text-3xl font-bold">{f.heading}</h2>
@@ -117,7 +117,7 @@ function Projects() {
   });
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 sm:pb-20 lg:pb-24">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
       <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-8">
 
         {/* SIDEBAR */}
@@ -240,7 +240,7 @@ function SidebarContent({ search, setSearch, activeTopic, setActiveTopic }) {
 /* ================= PUBLICATIONS ================= */
 function Publications({ pubRef }) {
   return (
-    <section ref={pubRef} className="border-t border-white/5 py-14 sm:py-18 lg:py-24">
+    <section ref={pubRef} className="border-t border-white/5 py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* left-aligned heading */}
         <div className="mb-10 sm:mb-12">

@@ -17,41 +17,46 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-[#16111d]/95 backdrop-blur border-b border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-18 md:h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
 
+        {/* LEFT — Logo */}
         <NavLink to="/" className="flex items-center gap-2.5 shrink-0">
           <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#b58be8] flex items-center justify-center">
             <Sparkles size={16} strokeWidth={2.5} className="text-[#1a1224]" />
           </div>
-          <span className="font-bold text-lg sm:text-xl tracking-tight text-[#b58be8]">AstroJourney</span>
+          <span className="font-bold text-lg sm:text-xl tracking-tight text-[#b58be8]">
+            AstroJourney
+          </span>
         </NavLink>
 
-        {/* Desktop nav */}
-        <div className="hidden lg:flex gap-6 xl:gap-8 text-sm">
+        {/* RIGHT — Nav links + Connect button (desktop) */}
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
           {links.map(({ to, label }) => (
             <NavLink
               key={to}
               to={to}
               end
               className={({ isActive }) =>
-                isActive
-                  ? "text-purple-300 font-semibold"
-                  : "text-gray-300 hover:text-purple-300 transition-colors"
+                `text-sm transition-colors ${
+                  isActive
+                    ? "text-[#b58be8] font-semibold"
+                    : "text-gray-300 hover:text-[#b58be8]"
+                }`
               }
             >
               {label}
             </NavLink>
           ))}
+
+          <button
+            onClick={() => navigate("/contact")}
+            className="ml-2 bg-[#b58be8] hover:bg-[#c9a8f0] transition-colors text-[#1a1224] px-5 py-2 rounded-xl font-semibold text-sm shrink-0"
+          >
+            Connect
+          </button>
         </div>
 
-        <button
-          className="hidden lg:block bg-purple-400 text-black px-4 xl:px-5 py-2 rounded-xl font-medium text-sm shrink-0"
-          onClick={() => navigate("/contact")}
-        >
-          Connect
-        </button>
-
-        {/* Mobile/Tablet hamburger */}
+        {/* RIGHT — Hamburger (mobile/tablet) */}
         <button
           className="lg:hidden text-white p-1"
           onClick={() => setOpen(!open)}
@@ -61,7 +66,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile/Tablet dropdown */}
+      {/* Mobile dropdown */}
       {open && (
         <div className="lg:hidden bg-[#16111d] border-t border-white/5 px-4 sm:px-6 py-5 flex flex-col gap-3">
           {links.map(({ to, label }) => (
@@ -71,14 +76,14 @@ export default function Navbar() {
               end
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `py-2 text-base font-medium ${isActive ? "text-purple-300" : "text-gray-300"}`
+                `py-2 text-base font-medium ${isActive ? "text-[#b58be8]" : "text-gray-300"}`
               }
             >
               {label}
             </NavLink>
           ))}
           <button
-            className="mt-2 bg-purple-400 text-black px-5 py-2.5 rounded-xl font-medium w-full"
+            className="mt-2 bg-[#b58be8] hover:bg-[#c9a8f0] transition-colors text-[#1a1224] px-5 py-2.5 rounded-xl font-semibold w-full"
             onClick={() => { navigate("/contact"); setOpen(false); }}
           >
             Connect
