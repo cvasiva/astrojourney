@@ -335,11 +335,10 @@ function PostList({ allFiltered, page, setPage, activeCategory, onClearFilters }
                 <FiChevronLeft size={16} /> Newer
               </button>
 
-              <div className="flex gap-2" role="list">
+              <div className="flex gap-2">
                 {pageNums.map((n) => (
                   <button
                     key={n}
-                    role="listitem"
                     onClick={() => setPage(n)}
                     aria-label={`Page ${n}`}
                     aria-current={safePage === n ? "page" : undefined}
